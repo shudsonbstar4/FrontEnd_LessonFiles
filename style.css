@@ -1,0 +1,180 @@
+/* Standard practice is to start with the main HTML elements (and their classes) and then move to other classes and ids */
+
+/* Set margin and padding to 0 to take away default margins and padding that the browser adds. This makes the design look closer to the same cross browser. */
+html, body {
+	padding: 0;
+	margin: 0;
+	font-family: Tahoma, Arial, sans-serif; /* Default fonts, this is a web safe font stack. Font stacks typically contain 3-4 fonts*/ /* On the note of the sans-serif... Pairing serifs with sans-serifs are basic guidelines for design.*/
+	color: #767676; /* Hex colors that have two alternating values are always gray! The higher the numbers get, the lighter the color. Try to use an online contrast checker to make sure the colors you choose pass contrast guidelines for easy reading and universal usability.*/
+}
+
+p {
+		font: 0.9em Tahoma, Arial, sans-serif; /* EMs are a better sizing standard to go by than pixels. The reason for this is EMs are based on the browser's default font size, so when you're working to make it standard cross browser, then the sizing proportions of your page will be closer to what you designed it to be.*/
+}
+
+h1, h2, h3, h4, h5, h6 {
+	color: #00C7FF;
+	font-family: 'Pacifico', cursive;
+	font-weight: normal; /* Takes away the faux bold that browsers give headings, rendering crisper fonts */
+	margin:0; /* I like to strip away the default margin and padding the browser gives heading elements. You can also override it with another value */
+	padding:0;
+	}
+
+h1 {
+	font-size: 3em;
+	line-height:1.5em; /* I didn't like the way the default line height of the lettering looked on my screen, so I gave it a little more space. That way the loops of the p's and q's didn't run over the next line */
+}
+
+nav {
+	padding: 1em;
+	margin-bottom: 2em;
+}
+
+nav  ul { /* The greater than sign is a type of selector which says that ONLY the unordered lists that are directly a child of the nav element will receive this styling. So if you put paragraph tags around the unordered list, it will no longer be affected!*/
+	list-style-type: none;
+	text-align: right;
+}
+
+nav  ul > li {
+	display: inline-block; /* I like to use inline-block. This combines the best of both properties, allowing you to keep it a block element and not let other elements float beside it while letting only elements of the same kind and grouping float beside it. Best used for: navigation and gallery thumbnails */
+	margin-right: 1em; /* Add a right margin to space each link out*/
+	margin-bottom:1em; /* For smaller window sizes when the links are not rendered next to each other, but stacked */
+	text-transform: lowercase;
+	
+}
+
+nav ul > li > a {
+	background-color: #00C7FF;
+	padding: 0.3em 1em;
+	border-radius:20px;
+	-moz-border-radius: 20px;
+	-webkit-border-radius: 20px; /* I added the above two properties for graceful degradation in older browsers. -moz- is the prefix used for some CSS3 elements in Firefox, while -webkit- is for Chrome, Safari, and Opera. IE is a whole different can of worms (and why developers and designers hate IE, especially since they sometimes have to write conditionals and separate style sheets just for older versions of IE) but in this case it will work. */
+	color: #fff;
+}
+
+nav h1 {
+	font-size: 3.7em;
+}
+
+hr {
+	opacity: 0.7;
+}
+
+/* This is for my contact page (that we didn't get to). I'm including the code for you to look at. */
+
+form {
+	border-radius:20px;
+	-moz-border-radius:20px;
+	-webkit-border-radius:20px;
+	padding: 1em;
+	border: 2px dashed #00C7FF;
+}
+
+fieldset {
+	border: none; /* Remove the default border the browser provides. It's ugly! */
+}
+
+input , textarea{ /* Since input and textarea are similar in their makeup, I'm going to group them together. Remember DRY!*/
+	padding: 0.5em; /* Gives the fields some extra space around the values entered */
+	border-radius:20px;
+	-moz-border-radius:20px;
+	-webkit-border-radius:20px;
+	margin: 1em 0;
+	border: 1px solid #00C7FF; /* When creating borders and box shadows, always be subtle in your color choices! You don't want it to stand out too much. */
+}
+
+input[type="submit"] { /* This is how you target only a specific input type; in this case, our button */
+	background-color: #00C7FF;
+	color: #fff;
+	font-weight: bold;
+	cursor: pointer; /* This will show the little hand with the finger extended to indicate that the button is clickable */
+}
+
+footer {
+	display: block; /*Display block to ensure that it's a block element and content that is not nested inside the footer doesn't overlap*/
+	background: url('assets/pattern.png') #fff; /* This is how you set a background image */
+	min-height: 5em; /* Minimum height sets the minimum height of the element and while not locking you into a set height, for scalability */
+	border-top: 1px solid #0081A6;
+	margin-top: 4em;
+	padding: 3em 1em; /* This is a shortcut. When it takes four values, the order is: top, right, bottom, left. You can remember it as 'clockwise.' When it takes two values, it's setting the top and bottom in the first one, and the right and left in the second. If you have one value, it's setting an equal number for all sides. This also works on the margin property*/
+}
+
+footer h1, h2, h3, h4, h5, h6 {
+	color: #fff;
+	font-weight: normal; /* No faux bolding! */
+}
+
+footer ul {
+	margin: 0;
+	padding: 0;
+}
+
+footer li {
+	list-style-type:none;
+	display: inline-block;
+	margin-right: 0.5em;
+}
+
+footer li  > a {
+	color: #fff;
+	font-size: 0.8em;
+}
+
+a {
+	text-decoration: none; /* Get rid of that 1998 underline*/
+	color: #fff;
+	opacity: 1.0;
+	transition: opacity 1s;
+	-webkit-transition: opacity 1s; /* In some older Chrome, Safari, and Opera browsers, transition doesn't work as nicely so that's why I'm using -webkit- */
+}
+
+a:hover, a:focus {
+	opacity: 0.6;
+	transition: opacity 1s;
+	-webkit-transition: opacity 1s;
+}
+
+.wrapper {
+	width: 80%;
+	margin: 0 auto; /* You need a specified width for this to work!*/
+
+} /*This class centers everything on the page and adds margins on both sides*/
+
+.clearfix {
+	clear:both; /* This class is used to clear the floats */
+}
+
+#logo, #logo h1 {
+	float:left;
+}
+
+#logo {
+	margin: 1em 0;
+}
+
+#logo h1 {
+	text-shadow: 1px 1px 1px #767676; /* This is like a drop shadow; very subtle for definition. The three attributes before the color are width, distance, and blur */
+}
+
+#banner {
+	width: 100%; /* 100% is the width of the wrapper */
+	padding: 0.5em;
+	margin: 1em 0; /*Set the margins to give it some space from the edge of the wrapper */
+}
+
+#banner img {
+	width:100%; /* The width is the full width of the container, not the image */
+	box-shadow: 1px 1px 1px rgba(0,0,0,0.5); /* rgba is for the RGB values and the final value is the opacity. */
+}
+
+.left {
+	width: 40%; /* When using percentages, it's good practice to give room for a margin. */
+	float: left;
+	margin-right: 10%; /* I use margin-right so I won't push my column away from the edge of the wrapper, which would mean it wouldn't line up with the rest of my content */
+}
+
+.right{
+	width: 40%;
+	float: right;
+	text-align:right; /* In this case, I align my text right so it's lined up with the edge of the wrapper on the right side, and so that it's a mirror of my .left column */
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html> <!-- Declaring the document type for the browser -->
+<html lang="en">
+<head>
+	<title>Home | My Bio Page | Web Development and Design</title> <!-- For the top of the browser, the title in your bookmarks, and SEO. It's good practice to include keywords -->
+	<meta charset="utf-8" /> <!-- I'm setting my initial character set to the UTF-8 standard -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- I put a viewport meta tag so I can grab my device width and make sure my site scales better -->
+	<meta name="description" content="Bio page for Sarah Hudson" /> <!-- For SEO -->
+	<meta name="author" content="Sarah Hudson" /> <!-- Designates you as the author of the page; good for SEO. There is actually a way to link your Google+ profile with your website so your name shows up as the author in search results... If you have a blog or personal website or write articles, then it might be helpful! -->
+	<link rel="stylesheet" type="text/css" href="style.css" />
+	<link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'> <!-- Grabbed fron Google fonts; always put your links to font CSS in the head of your document -->
+</head>
+
+<body>
+	
+	<div class="wrapper"> <!--IDs are used for elements that appear on the page a single time (like a wrapper). Classes are used for elements that appear multiple times on the page (like list elements). -->
+		<nav>
+		<a href="index.html"> <!-- I link my logo to the home page as convention -->
+			<div id="logo">
+				<h1>Sarah Hudson</h1>
+			</div> <!-- LOGO -->
+		</a>
+			<ul> <!-- Always use an unordered list for a link list, whether it's your top navigation or your footer site map! -->
+				<li><a href="index.html">Home</a></li>
+				<li><a href="contact.html">Contact</a></li>
+			</ul>
+		</nav>
+		<div class="clearfix"></div> <!-- clearfix is a convention used by developers to call a CSS class to clear their floats. If you don't clear your floats, it'll carry over even though you've closed your div! -->
+		<hr />
+		<!-- ENDING MY HEADER/NAV -->
+		<!-- START MY CONTENT -->
+		
+		<div id="banner">
+			<img src="assets/ocean-3.jpg" alt="Ocean" />
+		</div> <!--BANNER-->
+		<h1>Welcome to my bio!</h1>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam convallis lacus ut condimentum malesuada. Suspendisse convallis risus et risus congue, ac fringilla arcu faucibus. Aenean fermentum ut est sed ornare. In in dictum urna. Nunc cursus eros vel orci ultrices, vel vestibulum neque tincidunt. Aenean vel velit sit amet purus iaculis consequat. Sed volutpat est id odio posuere posuere. Mauris tellus mi, lobortis sed facilisis et, dictum eget dui. Fusce ullamcorper nibh id dapibus elementum. Nulla volutpat ac orci luctus commodo. Morbi in pharetra dolor, id fermentum nunc. Nulla blandit sollicitudin risus ac condimentum. Suspendisse laoreet consequat urna, eleifend pellentesque lorem faucibus non.</p>
+
+		<p>Aenean non auctor risus, et vehicula tellus. Integer lobortis varius libero, ut aliquet ligula fringilla vel. Maecenas non convallis orci. Cras semper posuere erat. Suspendisse sed risus sed neque venenatis dictum eu nec risus. Fusce in mauris hendrerit, congue sem quis, tincidunt purus. Praesent ut facilisis quam. Mauris a scelerisque nisl. Suspendisse in porttitor odio, ut ullamcorper nibh. Donec pulvinar, lacus a tempus luctus, turpis mauris dapibus odio, quis consectetur nibh odio ut mi. Aliquam erat volutpat. Phasellus in libero lacus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur pretium, turpis et facilisis bibendum, massa augue congue felis, id fermentum turpis nunc lacinia est. Donec eget sollicitudin ligula.</p>
+		
+	</div> <!--END WRAPPER -->
+	
+	<!--END CONTENT-->
+	
+	
+	<footer>
+		<div class="wrapper">
+			<div class="left">
+				<h2>&copy; 2013 Sarah Hudson</h2>
+				<ul>
+					<li><a href="http://www.facebook.com"><img src="assets/fb.png" alt="Facebook" /></a></li>
+					<li><a href="http://www.twitter.com"><img src="assets/twitter.png" alt="Twitter" /></a></li>
+					<li><a href="http://www.google.com"><img src="assets/google-plus.png" alt="Google+" /></a></li>
+				</ul> <!-- I grabbed these images from iconfinder.com. There you can find a lot of cool icons for your web projects! And many of them are free for commercial use -->
+			</div><!--END LEFT-->
+			<div class="right">
+				<ul>
+					<li><a href="index.html">Home</a></li> |
+					<li><a href="contact.html">Contact</a></li>
+				</ul>
+			</div><!--END RIGHT-->
+		</div> <!-- WRAPPER-->
+	</footer>
+
+</body>
+</html>

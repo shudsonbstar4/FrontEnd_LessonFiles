@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Home | My Bio Page | Web Development and Design</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="description" content="Bio page for Sarah Hudson" />
+	<meta name="author" content="Sarah Hudson" />
+	<link rel="stylesheet" type="text/css" href="style.css" />
+	<link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+	
+	<div class="wrapper"> <!--IDs are used for elements that appear on the page a single time (like a wrapper). Classes are used for elements that appear multiple times on the page (like list elements). -->
+		<nav>
+		<a href="index.html">
+			<div id="logo">
+				<h1>Sarah Hudson</h1>
+			</div> <!-- LOGO -->
+			</a>
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="contact.html">Contact</a></li>
+			</ul>
+		</nav>
+		<div class="clearfix"></div>
+		<hr />
+		
+		<!-- CONTENT -->
+		
+		<div class="left">
+			<h1>Contact</h1>
+			<p>Fields marked with an asterisk (*) are required.</p>
+			<form>
+				<fieldset> <!--Fieldset groups items of a field together; it's good for semantic structure to let browsers know that these items are related -->
+					*Name: <input type="text" name="name" id="name" placeholder="John Doe" required="required" /><br /> <!--Required attribute not available in Safari; however, it is convention for screen readers otherwise-->
+					*Email: <input type="text" name="email" id="email" placeholder="johndoe@email.com" required="required" /><br /> <!-- Side note: you can use value or placeholder, but I'm using placeholder because it tells the browser this isn't real information. Value is better used in fields when you want there to be a default required value to send to the server, such as '1' or 'checked' for checkboxes -->
+					Phone: <input type="text" name="phone" id="phone" placeholder="123-456-7890" /><br /> <!--Never make the phone number a required field! (Unless you really need it.) A lot of users will balk about signing up with the more fields they HAVE to fill out (and the more info you ask of them) and you want it to be quick, easy, and painless for them -->
+					*Comments: <br />
+					<textarea name="comments" id="comments" placeholder="Enter your comments..." required="required"></textarea>
+				</fieldset>
+				
+				<input type="submit" name="submit" id="submit" value="Submit" /> <!-- You might wonder why I have "name" and "id". Well, "name" is an older convention for older browsers, and even if it might not crop up often, I like to include it anyway to make sure my site is usable to everyone possible -->
+			</form>
+		</div>
+		
+		<div class="left">
+			<h1>Our Location</h1>
+			<p>We're open Mon-Fri from 7 a.m. to 7 p.m.</p>
+			<iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=318+Cherokee+Avenue+Southeast,+Atlanta,+GA&amp;aq=0&amp;oq=318+cherokee+&amp;sll=32.678125,-83.178297&amp;sspn=8.429289,16.907959&amp;ie=UTF8&amp;hq=&amp;hnear=318+Cherokee+Ave+SE,+Atlanta,+Georgia+30312&amp;t=m&amp;z=14&amp;iwloc=A&amp;output=embed"></iframe><br /><small><a href="https://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=318+Cherokee+Avenue+Southeast,+Atlanta,+GA&amp;aq=0&amp;oq=318+cherokee+&amp;sll=32.678125,-83.178297&amp;sspn=8.429289,16.907959&amp;ie=UTF8&amp;hq=&amp;hnear=318+Cherokee+Ave+SE,+Atlanta,+Georgia+30312&amp;t=m&amp;z=14&amp;iwloc=A" style="color:#0000FF;text-align:left">View Larger Map</a></small> <!-- What is that ugly code! It's a Google maps iFrame! You can get one of any address you want by going to maps.google.com and typing an address into the bar next to the logo, then clicking on the little link symbol in the left hand column on the right side. As a side note, I've had people ask me this before, and yes you can actually customize the look of the maps; however, it's tricky because you have to work with Google's API so most people just leave it the way it is -->
+		</div>
+		
+		<div class="clearfix"></div> <!-- clearfix is a convention used by developers to call a CSS class to clear their floats. If you don't clear your floats, it'll carry over and mess up your footer even though you've closed your div! -->
+		
+	</div> <!--END WRAPPER -->
+	
+	<!--END CONTENT-->
+	
+	
+	<footer>
+		<div class="wrapper">
+			<div class="left">
+				<h2>&copy; 2013 Sarah Hudson</h2>
+				<ul>
+					<li><a href="http://www.facebook.com"><img src="assets/fb.png" alt="Facebook" /></a></li>
+					<li><a href="http://www.twitter.com"><img src="assets/twitter.png" alt="Twitter" /></a></li>
+					<li><a href="http://www.google.com"><img src="assets/google-plus.png" alt="Google+" /></a></li>
+				</ul>
+			</div>
+			<div class="right">
+				<ul>
+					<li><a href="index.html">Home</a></li> |
+					<li><a href="contact.html">Contact</a></li>
+				</ul>
+			</div>
+		</div> <!-- WRAPPER-->
+	</footer>
+
+</body>
+</html>
